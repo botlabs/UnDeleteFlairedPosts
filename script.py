@@ -22,8 +22,8 @@ This post has been temporarily and automatically removed because it has no assig
 
 ------------------------------
 
-If you believe this is an error, contact /u/vbats1.
-"""
+If you believe this is an error, [contact the subreddit moderators](https://www.reddit.com/message/compose?to=%2Fr%2F{SUBREDDIT}).
+""".format(SUBREDDIT=SUBREDDIT)
 
 def get_access_token():
     response = requests.post("https://www.reddit.com/api/v1/access_token",
