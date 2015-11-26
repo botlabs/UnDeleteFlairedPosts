@@ -56,7 +56,7 @@ def main(r):
             if post.link_flair_text is None and (post.created_utc >= BOT_START_TIME):
                 diff = int(time.time()) - post.created_utc
                 if (diff > MAX_TIME_FLAIRLESS) and not already_replied(post):
-                    post.add_comment(REMOVAL_MESSAGE)
+                    post.add_comment(REMOVAL_MESSAGE).distinguish()
                     post.remove()
         
         # Undelete flaired posts
