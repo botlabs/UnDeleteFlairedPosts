@@ -61,7 +61,7 @@ def main(r):
         
         # Undelete flaired posts
         for post in sub.get_spam(limit=None):
-            if post.link_flair_text is not None:
+            if isinstance(post, praw.objects.Submission) and post.link_flair_text is not None:
                 my_comment = already_replied(post)
                 if my_comment is not None: # We know it was removed for being unflaired
                     post.approve()
