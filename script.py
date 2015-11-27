@@ -48,8 +48,8 @@ def already_replied(post):
     return None
 
 def main(r):
+    sub = r.get_subreddit(SUBREDDIT)
     while True:
-        sub = r.get_subreddit(SUBREDDIT)
         
         # Delete unflaired posts
         for post in sub.get_new(limit=None):
