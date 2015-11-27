@@ -72,6 +72,7 @@ if __name__ == "__main__":
     BOT_START_TIME = int(time.time())
     while True:
         try:
+            print("Retrieving OAuth token...")
             main(get_praw())
         except praw.errors.OAuthInvalidToken:
             print("OAuth token expired.")
